@@ -1,0 +1,5 @@
+package com.minispec.visitorGenerateJava;
+
+public interface IVisitor {
+
+}

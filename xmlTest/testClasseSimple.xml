@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE system SYSTEM "minispec.dtd">
+<system name="system">
+    <entity name = "Classe">
+        <attribute name="Nom" type="String"/>
+        <attribute name="Id" type="Integer"/>
+    </entity>
+</system>

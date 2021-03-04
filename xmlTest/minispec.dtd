@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT system (entity*)>
+    <!ATTLIST system name CDATA "" >
+<!ELEMENT entity (attribute*)>
+    <!ATTLIST entity name CDATA "" >
+<!ELEMENT attribute (#PCDATA)>
+    <!ATTLIST attribute name CDATA "" >
+    <!ATTLIST attribute type CDATA "" >
