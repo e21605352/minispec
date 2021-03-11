@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE system SYSTEM "minispec.dtd">
+<system name="system">
+	<entity name="Satellite">
+		<attribute name="Nom" type="String" />
+		<attribute name="Id" type="Integer" />
+	</entity>
+	<entity name="Balise">
+		<attribute name="Nom" type="String" />
+		<attribute name="Id" type="Integer" />
+	</entity>
+	<entity name="Fourmisse">
+		<attribute name="type" type="String" />
+		<attribute name="id" type="Integer" />
+	</entity>
+</system>

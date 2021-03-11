@@ -13,12 +13,9 @@ public class Launcher
 
   public static void main(String[] args) throws URISyntaxException
   {
-	  //System.out.println(Launcher.class.getClassLoader().getResource("testClasseSimple.xml").toURI().getPath());
-    Reader reader = new ReaderXmlDom("xmlTest/testClasseSimple.xml");
+    Reader reader = new ReaderXmlDom("xmlTest/testClasseSimple2.xml");
     Model model = reader.loadModel();
 
-    System.out.println(model);
-    
     IVisitor visitor = new VisitorGenerateJava();
     model.accept(visitor);
   }

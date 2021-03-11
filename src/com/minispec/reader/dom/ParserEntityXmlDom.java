@@ -24,11 +24,11 @@ public class ParserEntityXmlDom
   public List<Entity> parse()
   {
     List<Entity> entities = new ArrayList<>();
-    NodeList contactNodes = document.getElementsByTagName(ConstantsXml.ENTITY_NODE);
+    NodeList entityNodes = document.getElementsByTagName(ConstantsXml.ENTITY_NODE);
 
-    for (int i = 0; i < contactNodes.getLength(); i++)
+    for (int i = 0; i < entityNodes.getLength(); i++)
     {
-      Node contactNode = contactNodes.item(i);
+      Node contactNode = entityNodes.item(i);
 
       if (contactNode.getNodeType() == Node.ELEMENT_NODE)
       {
@@ -37,7 +37,7 @@ public class ParserEntityXmlDom
         Entity entity = new Entity();
         entity.setNom(entityElement.getAttribute(ConstantsXml.ENTITY_NAME));
 
-        ParserAttributeXmlDom parserAtribute = new ParserAttributeXmlDom(document);
+        ParserAttributeXmlDom parserAtribute = new ParserAttributeXmlDom(entityElement);
         entity.addAllAttributes(parserAtribute.parse());
 
         entities.add(entity);
