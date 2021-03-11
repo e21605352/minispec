@@ -3,9 +3,10 @@ package com.minispec.metamodel;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.minispec.visitorGenerateJava.IVisitor;
+import com.minispec.visitor.IVisitable;
+import com.minispec.visitor.IVisitor;
 
-public class Entity
+public class Entity implements IVisitable
 {
   protected String nom;
   protected List<Attribute> attributes;
@@ -57,6 +58,14 @@ public class Entity
 
   public void accept(IVisitor visitor)
   {
-
+	  visitor.visitEntity(this);
   }
+  
+  @Override
+	public String toString() {
+		
+		return "Entity: \n"
+				+ "\tNom: " + this.getNom() + "\n"
+				+ "\tAttributes: " + this.attributes + "\n";
+	}
 }

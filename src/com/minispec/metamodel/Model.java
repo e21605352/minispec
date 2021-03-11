@@ -3,12 +3,13 @@ package com.minispec.metamodel;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.minispec.visitorGenerateJava.IVisitor;
+import com.minispec.visitor.IVisitable;
+import com.minispec.visitor.IVisitor;
 
 /**
  * Classe representant system dans les documents XML
  */
-public class Model
+public class Model implements IVisitable
 {
   protected String nom;
   protected List<Entity> entities;
@@ -49,6 +50,14 @@ public class Model
 
   public void accept(IVisitor visitor)
   {
+	  visitor.visitModel(this);
 
   }
+  
+  @Override
+	public String toString() {
+		return "Model \n"
+				+ "\tNom: " + this.nom + "\n"
+				+ "\tEntity: " + this.entities +"\n";
+	}
 }

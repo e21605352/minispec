@@ -1,8 +1,9 @@
 package com.minispec.metamodel;
 
-import com.minispec.visitorGenerateJava.IVisitor;
+import com.minispec.visitor.IVisitable;
+import com.minispec.visitor.IVisitor;
 
-public class Attribute
+public class Attribute implements IVisitable
 {
   protected String nom;
   protected String type;
@@ -33,6 +34,13 @@ public class Attribute
 
   public void accept(IVisitor visitor)
   {
-
+	  visitor.visitAttribute(this);
   }
+  
+  @Override
+	public String toString() {
+		return "\tAttribut: \n"
+				+"\t\tNom: " + this.nom + "\n"
+				+"\t\tType: " + this.type + "\n";
+	}
 }

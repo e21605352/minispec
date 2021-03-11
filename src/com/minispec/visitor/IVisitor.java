@@ -1,4 +1,4 @@
-package com.minispec.visitorGenerateJava;
+package com.minispec.visitor;
 
 import com.minispec.metamodel.Attribute;
 import com.minispec.metamodel.Entity;
