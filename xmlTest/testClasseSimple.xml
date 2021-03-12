@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE system SYSTEM "minispec.dtd">
 <system name="system">
-	<entity name="Classe">
-		<attribute name="Nom" type="String" />
-		<attribute name="Id" type="Integer" />
+	<entity name="Fourmisse">
+		<attribute name="type">
+			<type>
+				<simpleType type="String" />
+			</type>
+		</attribute>
+		<attribute name = "copains">
+			<type>
+				<collection type="List">
+					<type>
+						<simpleType type="Fourmisse" />
+					</type>
+				</collection>
+			</type>
+		</attribute>
 	</entity>
 </system>

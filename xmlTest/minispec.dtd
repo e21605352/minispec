@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT system (entity*)>
-    <!ATTLIST system name CDATA "" >
+    <!ATTLIST system name CDATA #REQUIRED >
 <!ELEMENT entity (attribute*)>
-    <!ATTLIST entity name CDATA "" >
-<!ELEMENT attribute (#PCDATA)>
-    <!ATTLIST attribute name CDATA "" >
-    <!ATTLIST attribute type CDATA "" >
+    <!ATTLIST entity name CDATA #REQUIRED >
+    
+<!ELEMENT attribute (type) >
+    <!ATTLIST attribute name CDATA #REQUIRED >
+    
+<!ELEMENT type (simpleType | collection) >
+	
+<!ELEMENT simpleType (#PCDATA) >
+	<!ATTLIST simpleType type CDATA #REQUIRED >
+	
+<!ELEMENT collection (type) >
+	<!ATTLIST  collection type (Set|Bag|Array|List) #REQUIRED >
+	<!ATTLIST  collection size CDATA "1" >

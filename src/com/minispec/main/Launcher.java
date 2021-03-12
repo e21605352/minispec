@@ -13,7 +13,7 @@ public class Launcher
 
   public static void main(String[] args) throws URISyntaxException
   {
-    Reader reader = new ReaderXmlDom("xmlTest/testClasseSimple2.xml");
+    Reader reader = new ReaderXmlDom("xmlTest/testClasseSimple.xml");
     Model model = reader.loadModel();
 
     IVisitor visitor = new VisitorGenerateJava();
