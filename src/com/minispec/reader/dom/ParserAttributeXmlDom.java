@@ -34,7 +34,7 @@ public class ParserAttributeXmlDom
         Attribute attribute = new Attribute();
         attribute.setNom(attributeElement.getAttribute(ConstantsXml.ATTRIBUTE_NAME));
         ParserTypeXmlDom parserType = new ParserTypeXmlDom(attributeElement);
-        parserType.parse();
+        attribute.setType(parserType.parse());
 
         attributes.add(attribute);
       }

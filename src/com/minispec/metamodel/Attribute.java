@@ -1,12 +1,13 @@
 package com.minispec.metamodel;
 
+import com.minispec.metamodel.type.Type;
 import com.minispec.visitor.IVisitable;
 import com.minispec.visitor.IVisitor;
 
 public class Attribute implements IVisitable
 {
   protected String nom;
-  protected String type;
+  protected Type type;
 
   // ================================================================================
   // Accesseurs
@@ -22,25 +23,25 @@ public class Attribute implements IVisitable
     this.nom = nom;
   }
 
-  public String getType()
+  public Type getType()
   {
     return type;
   }
 
-  public void setType(String type)
+  public void setType(Type type)
   {
     this.type = type;
   }
 
+  @Override
   public void accept(IVisitor visitor)
   {
-	  visitor.visitAttribute(this);
+    visitor.visitAttribute(this);
   }
-  
+
   @Override
-	public String toString() {
-		return "\tAttribut: \n"
-				+"\t\tNom: " + this.nom + "\n"
-				+"\t\tType: " + this.type + "\n";
-	}
+  public String toString()
+  {
+    return "\tAttribut: \n" + "\t\tNom: " + this.nom + "\n" + "\t\tType: " + this.type + "\n";
+  }
 }

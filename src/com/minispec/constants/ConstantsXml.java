@@ -12,8 +12,15 @@ public class ConstantsXml
 
   // Attribute node
   public static final String ATTRIBUTE_NODE = "attribute";
-
-  // Attribute attributes
   public static final String ATTRIBUTE_NAME = "name";
-  public static final String ATTRIBUTE_TYPE = "type";
+
+  // Type node
+  public static final String TYPE_NODE = "type";
+
+  public static final String SIMPLE_NODE = "simpleType";
+  public static final String SIMPLE_NAME = "type";
+
+  public static final String COLLECTION_NODE = "collection";
+  public static final String COLLECTION_NAME = "type";
+  public static final String COLLECTION_SIZE = "size";
 }

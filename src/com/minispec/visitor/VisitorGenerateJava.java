@@ -10,6 +10,8 @@ import com.minispec.constants.Config;
 import com.minispec.metamodel.Attribute;
 import com.minispec.metamodel.Entity;
 import com.minispec.metamodel.Model;
+import com.minispec.metamodel.type.CollectionType;
+import com.minispec.metamodel.type.SimpleType;
 import com.minispec.utils.ClassGeneration;
 
 public class VisitorGenerateJava implements IVisitor
@@ -88,5 +90,19 @@ public class VisitorGenerateJava implements IVisitor
     {
       e.printStackTrace();
     }
+  }
+
+  @Override
+  public void visitSimpleType(SimpleType type)
+  {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
+  public void visitCollection(CollectionType type)
+  {
+    // TODO Auto-generated method stub
+
   }
 }

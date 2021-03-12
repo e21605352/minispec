@@ -11,7 +11,11 @@
 			<type>
 				<collection type="List">
 					<type>
-						<simpleType type="Fourmisse" />
+						<collection type="Bag">
+							<type>
+								<simpleType type="Fourmisse" />
+							</type>
+						</collection>
 					</type>
 				</collection>
 			</type>
